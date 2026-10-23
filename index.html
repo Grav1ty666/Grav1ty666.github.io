@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="mali040929.dpdns.org 的 GitHub Pages 测试首页">
+  <title>网站已经成功运行</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, #dce9ff 0, transparent 38%),
+        radial-gradient(circle at bottom right, #e6e0ff 0, transparent 42%),
+        #f5f7fb;
+      color: #172033;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(680px, 100%);
+      padding: clamp(32px, 7vw, 64px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 24px 70px rgba(46, 61, 95, 0.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #e7f8ef;
+      color: #137a45;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .status::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #19a15f;
+      content: "";
+      box-shadow: 0 0 0 4px rgba(25, 161, 95, 0.12);
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    p {
+      margin: 0;
+      color: #526079;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    code {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #eef2f9;
+      color: #34405a;
+      font-size: 15px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="status">GitHub Pages 运行正常</div>
+    <h1>网站已经成功运行</h1>
+    <p>这是部署在 GitHub Pages 上的测试首页。接下来，来自自定义域名的访问也会在这里显示。</p>
+    <code>mali040929.dpdns.org</code>
+  </main>
+</body>
+</html>
