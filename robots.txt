@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mali040929.dpdns.org/sitemap.xml

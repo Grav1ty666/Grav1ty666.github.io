@@ -3,95 +3,305 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="mali040929.dpdns.org 的 GitHub Pages 测试首页">
-  <title>网站已经成功运行</title>
-  <style>
-    :root {
-      color-scheme: light;
-      font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
-      background:
-        radial-gradient(circle at top left, #dce9ff 0, transparent 38%),
-        radial-gradient(circle at bottom right, #e6e0ff 0, transparent 42%),
-        #f5f7fb;
-      color: #172033;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-
-    main {
-      width: min(680px, 100%);
-      padding: clamp(32px, 7vw, 64px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: 0 24px 70px rgba(46, 61, 95, 0.14);
-      backdrop-filter: blur(14px);
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: #e7f8ef;
-      color: #137a45;
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .status::before {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #19a15f;
-      content: "";
-      box-shadow: 0 0 0 4px rgba(25, 161, 95, 0.12);
-    }
-
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(32px, 7vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -0.035em;
-    }
-
-    p {
-      margin: 0;
-      color: #526079;
-      font-size: 17px;
-      line-height: 1.75;
-    }
-
-    code {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: #eef2f9;
-      color: #34405a;
-      font-size: 15px;
-      overflow-wrap: anywhere;
-    }
-  </style>
+  <meta name="description" content="Grav1ty666 的个人主页：关注开发工具、科研工作流与知识系统。">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="Grav1ty666 — Build useful things.">
+  <meta property="og:description" content="开发者、工具制造者。关注桌面工具、科研工作流与知识系统。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mali040929.dpdns.org/">
+  <link rel="canonical" href="https://mali040929.dpdns.org/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="/script.js" defer></script>
+  <title>Grav1ty666 — Build useful things.</title>
 </head>
 <body>
-  <main>
-    <div class="status">GitHub Pages 运行正常</div>
-    <h1>网站已经成功运行</h1>
-    <p>这是部署在 GitHub Pages 上的测试首页。接下来，来自自定义域名的访问也会在这里显示。</p>
-    <code>mali040929.dpdns.org</code>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Grav1ty666，返回首页">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span class="brand-name">GRAV1TY</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+        <a href="#about"><span>01.</span>关于</a>
+        <a href="#work"><span>02.</span>项目</a>
+        <a href="#toolkit"><span>03.</span>工具</a>
+        <a href="#contact"><span>04.</span>联系</a>
+        <a class="nav-github" href="https://github.com/Grav1ty666" target="_blank" rel="noreferrer">
+          GitHub
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="打开导航菜单">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="social-rail" aria-label="社交链接">
+    <a href="https://github.com/Grav1ty666" target="_blank" rel="noreferrer" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.05-.02-1.9-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.96a9.3 9.3 0 0 1 2.5.35c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.95.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+      </svg>
+    </a>
+    <a href="https://orcid.org/0009-0003-8813-7916" target="_blank" rel="noreferrer" aria-label="ORCID">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="8.2" cy="8.2" r="1.15"/>
+        <path d="M8.2 11v6M12.4 17V8h2.55c2.13 0 3.45 1.2 3.45 3.2 0 2-1.32 3.2-3.45 3.2h-1.1V17" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <span class="rail-line" aria-hidden="true"></span>
+  </aside>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">你好，我的名字是</p>
+        <h1 class="hero-title reveal" id="hero-title">Grav1ty<span>666</span>.</h1>
+        <h2 class="hero-statement reveal">我把复杂的想法，<span>做成真正好用的工具。</span></h2>
+        <p class="hero-description reveal">
+          我是 Grav1ty666，一名在 Shanghai 的开发者。关注桌面工具、科研工作流与知识系统，
+          喜欢把重复劳动变成可靠、清晰、可以长期使用的产品。
+        </p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#work">
+            看看我做了什么
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="button button-ghost" href="https://github.com/Grav1ty666" target="_blank" rel="noreferrer">
+            浏览 GitHub
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <div class="hero-facts reveal" aria-label="项目概览">
+          <div><strong>06</strong><span>公开项目</span></div>
+          <div><strong>100+</strong><span>GitHub Stars</span></div>
+          <div><strong>∞</strong><span>持续迭代</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="profile-card">
+          <div class="profile-card-top">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span>PROFILE / 2026</span>
+          </div>
+          <div class="profile-identity">
+            <div class="profile-monogram">G</div>
+            <div><p>Grav1ty666</p><span>Developer · Builder</span></div>
+          </div>
+          <div class="code-preview">
+            <p><span class="code-muted">// what I care about</span></p>
+            <p><span class="code-keyword">const</span> focus = {</p>
+            <p class="code-indent">build: <span class="code-string">'useful tools'</span>,</p>
+            <p class="code-indent">research: <span class="code-string">'clear workflows'</span>,</p>
+            <p class="code-indent">learn: <span class="code-string">'by making'</span></p>
+            <p>};</p>
+          </div>
+          <div class="profile-status">
+            <span class="status-dot"></span>
+            <span>Building in public</span>
+            <span class="status-line"></span>
+          </div>
+        </div>
+        <p class="visual-note">build / learn / repeat</p>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>BUILD USEFUL THINGS</span><i>✦</i>
+        <span>STAY CURIOUS</span><i>✦</i>
+        <span>SHIP &amp; ITERATE</span><i>✦</i>
+        <span>BUILD USEFUL THINGS</span><i>✦</i>
+        <span>STAY CURIOUS</span><i>✦</i>
+        <span>SHIP &amp; ITERATE</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <h2 class="section-heading reveal" id="about-title"><span>01.</span>关于我</h2>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>我更喜欢从真实问题出发：先理解它为什么麻烦，再做一个足够直接、足够可靠的解法。项目横跨桌面应用、命令行工具、科研分析流程和可检索的知识库。</p>
+          <p>与其堆叠功能，我更在意一个工具是否容易理解、是否能复现结果，以及它在第一次使用之后是否还值得继续打开。</p>
+          <p class="about-note">目前在上海，持续把零散的工作流整理成可以复用的软件。</p>
+        </div>
+        <div class="principles reveal">
+          <div class="principle">
+            <span>01</span>
+            <div><h3>从问题开始</h3><p>不为了技术而技术，先确认它真的解决了什么。</p></div>
+          </div>
+          <div class="principle">
+            <span>02</span>
+            <div><h3>让复杂变得清楚</h3><p>把混乱的步骤整理成可理解、可复现的流程。</p></div>
+          </div>
+          <div class="principle">
+            <span>03</span>
+            <div><h3>做完，再做好</h3><p>先交付一个能工作的版本，再从真实使用中迭代。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <h2 class="section-heading reveal" id="work-title"><span>02.</span>精选项目</h2>
+      <article class="featured-project reveal">
+        <div class="featured-copy">
+          <p class="project-overline">Featured Project</p>
+          <h3><a href="https://github.com/Grav1ty666/ResumeBuilder" target="_blank" rel="noreferrer">ResumeBuilder</a></h3>
+          <div class="featured-description">
+            <p>一个离线可用的简历生成器，提供单文件 EXE 和安装包。目标很简单：不依赖在线服务，也能快速整理、编辑并导出一份清楚的简历。</p>
+          </div>
+          <ul class="tech-list" aria-label="技术栈">
+            <li>Python</li><li>Desktop</li><li>Inno Setup</li><li>Offline-first</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Grav1ty666/ResumeBuilder" target="_blank" rel="noreferrer" aria-label="查看 ResumeBuilder 源码">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.05-.02-1.9-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.96a9.3 9.3 0 0 1 2.5.35c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.95.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.08 10.08 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Grav1ty666/ResumeBuilder" target="_blank" rel="noreferrer" aria-label="打开 ResumeBuilder 项目">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="resume-art" aria-hidden="true">
+          <div class="art-metric"><strong>100+</strong><span>GitHub Stars</span></div>
+          <div class="resume-sheet">
+            <div class="resume-header">
+              <span class="resume-avatar"></span>
+              <div><i></i><i></i></div>
+            </div>
+            <div class="resume-block"></div>
+            <div class="resume-lines"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="resume-export"><span></span>EXPORT PDF</div>
+          </div>
+          <div class="art-label">OFFLINE / SIMPLE / YOURS</div>
+        </div>
+      </article>
+
+      <div class="project-heading reveal">
+        <p>其他作品</p><span>从工具到科研工作流</span>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="m7 9 3 3-3 3M13 16h4"/></svg></span>
+            <span class="project-index">01</span>
+          </div>
+          <h3>SJTU Navigator</h3>
+          <p>面向上海交通大学常用网址的终端导航工具，用最少的操作快速找到需要的服务。</p>
+          <ul class="card-tags"><li>Python</li><li>CLI</li><li>Windows</li></ul>
+          <a class="card-link" href="https://github.com/Grav1ty666/SJTU-Navigator" target="_blank" rel="noreferrer" aria-label="查看 SJTU Navigator"></a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span>
+            <span class="project-index">02</span>
+          </div>
+          <h3>VideoSaver</h3>
+          <p>内置浏览器与自动嗅探能力的视频下载工具，支持分片并发、自动重试和 MP4 转封装。</p>
+          <ul class="card-tags"><li>Electron</li><li>JavaScript</li><li>FFmpeg</li></ul>
+          <a class="card-link" href="https://github.com/Grav1ty666/VideoSaver" target="_blank" rel="noreferrer" aria-label="查看 VideoSaver"></a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+            <span class="project-index">03</span>
+          </div>
+          <h3>rnaseq-pipeline</h3>
+          <p>从 count 矩阵到差异分析、功能富集、可视化与自动报告的模块化 RNA-seq 分析流程。</p>
+          <ul class="card-tags"><li>R</li><li>DESeq2</li><li>RNA-seq</li></ul>
+          <a class="card-link" href="https://github.com/Grav1ty666/rnaseq-pipeline" target="_blank" rel="noreferrer" aria-label="查看 rnaseq-pipeline"></a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></span>
+            <span class="project-index">04</span>
+          </div>
+          <h3>stats-mcp</h3>
+          <p>把常用统计分析能力包装为本地 MCP 工具，覆盖 ANOVA、混合模型、回归与多重比较。</p>
+          <ul class="card-tags"><li>Python</li><li>MCP</li><li>Statistics</li></ul>
+          <a class="card-link" href="https://github.com/Grav1ty666/stats-mcp" target="_blank" rel="noreferrer" aria-label="查看 stats-mcp"></a>
+        </article>
+
+        <article class="project-card project-card-wide reveal">
+          <div class="card-top">
+            <span class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 2-7 6-10Z"/><path d="M12 18v3M9 10c1-2 2-3 3-4"/></svg></span>
+            <span class="project-index">05</span>
+          </div>
+          <h3>Artemisinin Knowledge Base</h3>
+          <p>面向青蒿素研究的模块化知识库，把合成通路、关键酶、转录因子、激素调控与原始文献整理成可检索、可核对的结构化内容。</p>
+          <ul class="card-tags"><li>Research</li><li>Knowledge System</li><li>Bilingual</li></ul>
+          <a class="card-link" href="https://github.com/Grav1ty666/artemisinin-knowledge-base" target="_blank" rel="noreferrer" aria-label="查看 Artemisinin Knowledge Base"></a>
+        </article>
+      </div>
+      <a class="all-projects reveal" href="https://github.com/Grav1ty666?tab=repositories" target="_blank" rel="noreferrer">
+        查看全部 GitHub 项目
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+
+    <section class="section toolkit" id="toolkit" aria-labelledby="toolkit-title">
+      <h2 class="section-heading reveal" id="toolkit-title"><span>03.</span>我的工具箱</h2>
+      <div class="toolkit-grid">
+        <article class="tool-card reveal">
+          <span class="tool-number">A</span>
+          <h3>开发与构建</h3>
+          <p>把想法做成可以安装、打开、长期使用的软件。</p>
+          <ul><li>Python</li><li>JavaScript</li><li>Node.js / Electron</li><li>HTML / CSS</li><li>PyInstaller / NSIS</li></ul>
+        </article>
+        <article class="tool-card reveal">
+          <span class="tool-number">B</span>
+          <h3>科研与数据</h3>
+          <p>让分析步骤清楚、结果可复现、过程可以解释。</p>
+          <ul><li>R / DESeq2</li><li>RNA-seq</li><li>统计建模</li><li>数据可视化</li><li>文献与知识整理</li></ul>
+        </article>
+        <article class="tool-card reveal">
+          <span class="tool-number">C</span>
+          <h3>协作与交付</h3>
+          <p>从本地实验到公开发布，保持版本和流程可追踪。</p>
+          <ul><li>Git / GitHub</li><li>GitHub Actions</li><li>MCP</li><li>技术文档</li><li>Windows 打包</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow reveal">04. 接下来</p>
+      <h2 class="contact-title reveal" id="contact-title">有值得认真做出来的想法吗？</h2>
+      <p class="contact-copy reveal">欢迎从 GitHub 找到我。你可以看看项目、提交 issue，或者直接发起一场关于工具和科研工作流的讨论。</p>
+      <div class="contact-actions reveal">
+        <a class="button button-primary" href="https://github.com/Grav1ty666" target="_blank" rel="noreferrer">
+          在 GitHub 找到我
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="text-link" href="https://orcid.org/0009-0003-8813-7916" target="_blank" rel="noreferrer">
+          ORCID
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div><p>Designed &amp; built with intent.</p><p>© <span data-year>2026</span> Grav1ty666</p></div>
+    <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+  </footer>
 </body>
 </html>
