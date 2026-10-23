@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://mali040929.dpdns.org/">
   <link rel="icon" href="/assets/github-avatar.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/assets/github-avatar.jpg">
-  <link rel="stylesheet" href="/styles.css?v=20261023-11">
+  <link rel="stylesheet" href="/styles.css?v=20261023-14">
   <script>
     (() => {
       let savedTheme = null;
@@ -28,7 +28,7 @@
       document.documentElement.classList.add("js");
     })();
   </script>
-  <script src="/script.js?v=20261023-11" defer></script>
+  <script src="/script.js?v=20261023-14" defer></script>
   <title>Grav1ty666 — Build useful things.</title>
 </head>
 <body>
@@ -46,9 +46,10 @@
       <nav class="primary-nav" id="primary-nav" aria-label="主导航">
         <a href="#about"><span>01.</span>关于</a>
         <a href="#education"><span>02.</span>教育</a>
-        <a href="#work"><span>03.</span>项目</a>
-        <a href="#toolkit"><span>04.</span>工具</a>
-        <a href="#contact"><span>05.</span>联系</a>
+        <a href="#research"><span>03.</span>研究</a>
+        <a href="#work"><span>04.</span>项目</a>
+        <a href="#toolkit"><span>05.</span>工具</a>
+        <a href="#contact"><span>06.</span>联系</a>
         <a class="nav-github" href="https://github.com/Grav1ty666" target="_blank" rel="noreferrer">
           GitHub
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
@@ -186,7 +187,6 @@
       <h2 class="section-heading reveal" id="education-title"><span>02.</span>教育经历</h2>
       <div class="education-intro reveal">
         <p>从姜堰到扬州，再到上海。一路向前，也一路保留对问题、工具与知识的好奇。</p>
-        <span>时间按连续学制推算</span>
       </div>
 
       <ol class="education-list">
@@ -268,13 +268,60 @@
         </li>
       </ol>
 
-      <p class="education-note reveal">
-        本科阶段按 2022.09—2026.06 计算，其余学段按连续学制推算；硕士阶段从 2026.09 起记录。
-      </p>
+    </section>
+
+    <section class="section research" id="research" aria-labelledby="research-title">
+      <h2 class="section-heading reveal" id="research-title"><span>03.</span>论文与分享</h2>
+
+      <div class="research-grid">
+        <article class="publication-card reveal">
+          <div class="publication-topline">
+            <span>First-author Article</span>
+            <time datetime="2025-09-18">2025.09</time>
+          </div>
+          <p class="publication-journal">Plants · MDPI</p>
+          <h3>
+            <a href="https://www.mdpi.com/2223-7747/14/18/2908" target="_blank" rel="noreferrer">
+              Genome-Wide Identification and Expression Profiling of the RNA-Directed DNA Methylation Pathway Genes in <em>Cucumis sativus</em> L.
+            </a>
+          </h3>
+          <p class="publication-authors">
+            <strong>Li Ma</strong>, Ziyi Li, Lei Qiu, Jieni Gu, Piaopiao Shi, Xinyi Cao, Xinran Zhang, Xi Xu, Yinbo Ma
+          </p>
+          <p class="publication-summary">
+            围绕黄瓜 RNA 定向 DNA 甲基化（RdDM）通路开展全基因组鉴定，并结合组织表达与非生物胁迫条件下的转录模式，
+            识别潜在的关键响应基因与调控线索。
+          </p>
+          <div class="publication-footer">
+            <span>Plants 2025, 14(18), 2908</span>
+            <a href="https://doi.org/10.3390/plants14182908" target="_blank" rel="noreferrer">
+              阅读论文
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="wechat-card reveal">
+          <div class="wechat-heading">
+            <p>WeChat Official Account</p>
+            <h3><a href="https://weixin.qq.com/r/mp/QCeosN3E3oChrZnT93JS" target="_blank" rel="noreferrer">今天也在调参数</a></h3>
+          </div>
+          <a class="wechat-qr-wrap" href="https://weixin.qq.com/r/mp/QCeosN3E3oChrZnT93JS" target="_blank" rel="noreferrer" aria-label="打开微信公众号“今天也在调参数”">
+            <img src="/assets/wechat/wechat-qr.png" alt="微信公众号“今天也在调参数”二维码" width="484" height="484" loading="lazy" decoding="async">
+          </a>
+          <p>分享科研、数据分析与构建过程中的思考。用微信扫一扫，或直接搜索公众号名称。</p>
+          <a class="wechat-open" href="https://weixin.qq.com/r/mp/QCeosN3E3oChrZnT93JS" target="_blank" rel="noreferrer">
+            打开公众号页面
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <p class="wechat-update-note">最新文章请以公众号发布内容为准</p>
+        </article>
+      </div>
+
     </section>
 
     <section class="section work" id="work" aria-labelledby="work-title">
-      <h2 class="section-heading reveal" id="work-title"><span>03.</span>精选项目</h2>
+      <h2 class="section-heading reveal" id="work-title"><span>04.</span>精选项目</h2>
       <article class="featured-project reveal">
         <div class="featured-copy">
           <p class="project-overline">Featured Project</p>
@@ -377,7 +424,7 @@
     </section>
 
     <section class="section toolkit" id="toolkit" aria-labelledby="toolkit-title">
-      <h2 class="section-heading reveal" id="toolkit-title"><span>04.</span>我的工具箱</h2>
+      <h2 class="section-heading reveal" id="toolkit-title"><span>05.</span>我的工具箱</h2>
       <div class="toolkit-grid">
         <article class="tool-card reveal">
           <span class="tool-number">A</span>
@@ -401,7 +448,7 @@
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow reveal">05. 接下来</p>
+      <p class="eyebrow reveal">06. 接下来</p>
       <h2 class="contact-title reveal" id="contact-title">有值得认真做出来的想法吗？</h2>
       <p class="contact-copy reveal">欢迎通过邮箱联系我，也可以从 GitHub 看看项目、提交 issue，或者直接发起一场关于工具和科研工作流的讨论。</p>
       <div class="email-list reveal" aria-label="电子邮箱">
