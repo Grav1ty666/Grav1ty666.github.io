@@ -42,7 +42,7 @@
   --header-height: 88px;
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
-  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -459,6 +459,16 @@ main,
   letter-spacing: 0.06em;
 }
 
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.project-overline {
+  font-family: var(--font-mono);
+}
+
 .eyebrow::before {
   display: inline-block;
   width: 26px;
@@ -588,7 +598,8 @@ main,
 .hero-facts span {
   margin-top: 4px;
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1191,7 +1202,8 @@ main,
 
 .project-heading span {
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  font-weight: 500;
   font-size: 12px;
 }
 
@@ -1315,8 +1327,9 @@ main,
   gap: 10px;
   margin-top: 38px;
   color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .all-projects svg {
