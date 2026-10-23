@@ -1321,6 +1321,152 @@ main,
   line-height: 1.7;
 }
 
+.publications .publication-card {
+  width: 100%;
+}
+
+.wechat-feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(350px, 0.92fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.wechat-poster {
+  display: grid;
+  min-height: 390px;
+  place-items: center;
+  padding: 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.18), transparent 32%),
+    linear-gradient(145deg, #0b9b59, #087c49);
+}
+
+.wechat-poster img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 38, 22, 0.28);
+}
+
+.wechat-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 34px;
+}
+
+.wechat-panel-heading p {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.wechat-panel-heading h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(27px, 3vw, 38px);
+  letter-spacing: -0.035em;
+}
+
+.wechat-panel-heading h3 a:hover {
+  color: var(--accent);
+}
+
+.wechat-description {
+  margin: 16px 0 0;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.wechat-article-list {
+  margin-top: 28px;
+}
+
+.wechat-list-label {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.wechat-article-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms var(--ease);
+}
+
+.wechat-article-item:hover {
+  border-color: var(--accent-border);
+  background: var(--card-hover);
+  transform: translateY(-2px);
+}
+
+.wechat-article-item time {
+  align-self: start;
+  padding-top: 2px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.wechat-article-item span {
+  min-width: 0;
+}
+
+.wechat-article-item strong,
+.wechat-article-item small {
+  display: block;
+}
+
+.wechat-article-item strong {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.wechat-article-item small {
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.wechat-article-item svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.wechat-panel > .wechat-open {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 26px;
+}
+
 .featured-project {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(370px, 1.08fr);
@@ -2037,6 +2183,20 @@ main,
   }
 }
 
+@media (min-width: 901px) and (max-width: 1120px) {
+  .header-inner {
+    gap: 18px;
+  }
+
+  .primary-nav {
+    gap: 13px;
+  }
+
+  .primary-nav a {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 900px) {
   :root {
     --header-height: 72px;
@@ -2124,6 +2284,26 @@ main,
 
   .research-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wechat-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  .wechat-poster {
+    min-height: 0;
+    padding: 24px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .wechat-panel {
+    padding: 28px 24px;
+  }
+
+  .wechat-panel > .wechat-open {
+    margin-top: 22px;
+    padding-top: 0;
   }
 
   .publication-card,
@@ -2282,6 +2462,33 @@ main,
   .featured-description {
     padding: 20px;
     font-size: 15px;
+  }
+
+  .publication-card {
+    min-height: 0;
+    padding: 24px 22px;
+  }
+
+  .publication-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wechat-poster {
+    padding: 16px;
+  }
+
+  .wechat-panel {
+    padding: 24px 20px;
+  }
+
+  .wechat-article-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .wechat-article-item time {
+    grid-column: 1 / -1;
   }
 
   .resume-art {
