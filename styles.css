@@ -1421,6 +1421,70 @@ main,
   line-height: 1.85;
 }
 
+.email-list {
+  display: grid;
+  max-width: 850px;
+  margin: 34px auto 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+
+.email-list a {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-soft);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms var(--ease);
+}
+
+.email-list a:hover {
+  border-color: var(--accent-border);
+  background: var(--card-hover);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.email-provider {
+  min-width: 48px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.email-address {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+
+.email-list svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
 .contact-actions {
   justify-content: center;
 }
@@ -1757,6 +1821,15 @@ main,
   .contact {
     padding-top: 98px;
     padding-bottom: 102px;
+  }
+
+  .email-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .email-list a {
+    padding: 13px 14px;
   }
 
   .site-footer {
