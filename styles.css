@@ -1270,7 +1270,7 @@ main,
   display: grid;
   grid-template-columns: 270px minmax(0, 1fr);
   gap: 18px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .wechat-account-card {
@@ -1290,7 +1290,10 @@ main,
   display: flex;
   min-width: 0;
   flex-direction: column;
-  padding-top: 2px;
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card-bg);
 }
 
 .wechat-panel-heading p {
@@ -1324,6 +1327,7 @@ main,
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  margin-top: 24px;
 }
 
 .wechat-list-label {
@@ -1403,8 +1407,8 @@ main,
 
 .wechat-account-card .wechat-open {
   align-self: flex-start;
-  margin-top: 18px;
-  padding-top: 0;
+  margin-top: auto;
+  padding-top: 22px;
 }
 
 .featured-project {
@@ -2231,7 +2235,7 @@ main,
   }
 
   .wechat-articles-panel {
-    padding-top: 8px;
+    padding: 24px 20px;
   }
 
   .project-card-wide {
