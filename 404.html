@@ -4,8 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08111f">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/github-avatar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/styles.css">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch {}
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    })();
+  </script>
   <title>页面没有找到 — Grav1ty666</title>
 </head>
 <body>

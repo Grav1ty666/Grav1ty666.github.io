@@ -9,10 +9,25 @@
   <meta property="og:description" content="开发者、工具制造者。关注桌面工具、科研工作流与知识系统。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mali040929.dpdns.org/">
+  <meta property="og:image" content="https://mali040929.dpdns.org/assets/github-avatar.jpg">
   <link rel="canonical" href="https://mali040929.dpdns.org/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/github-avatar.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/assets/github-avatar.jpg">
   <link rel="stylesheet" href="/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch {}
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark" ? savedTheme : preferredTheme;
+      document.documentElement.classList.add("js");
+    })();
+  </script>
   <script src="/script.js" defer></script>
   <title>Grav1ty666 — Build useful things.</title>
 </head>
@@ -24,7 +39,7 @@
   <header class="site-header" data-header>
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Grav1ty666，返回首页">
-        <span class="brand-mark" aria-hidden="true">G</span>
+        <img class="brand-avatar" src="/assets/github-avatar.jpg" alt="" width="40" height="40">
         <span class="brand-name">GRAV1TY</span>
       </a>
 
@@ -39,10 +54,21 @@
         </a>
       </nav>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="打开导航菜单">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="切换到浅色模式" title="切换深浅色模式">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.8"></circle>
+            <path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 15.1A8.5 8.5 0 0 1 8.9 3.7 8.5 8.5 0 1 0 20.3 15Z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="打开导航菜单">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -98,7 +124,7 @@
             <span>PROFILE / 2026</span>
           </div>
           <div class="profile-identity">
-            <div class="profile-monogram">G</div>
+            <img class="profile-avatar" src="/assets/github-avatar.jpg" alt="" width="64" height="64">
             <div><p>Grav1ty666</p><span>Developer · Builder</span></div>
           </div>
           <div class="code-preview">

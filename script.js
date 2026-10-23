@@ -4,6 +4,49 @@ const navigation = document.querySelector(".primary-nav");
 const navLinks = [...document.querySelectorAll(".primary-nav a[href^='#']")];
 const sections = [...document.querySelectorAll("main section[id]")];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+const getStoredTheme = () => {
+  try {
+    const theme = localStorage.getItem("theme");
+    return theme === "light" || theme === "dark" ? theme : null;
+  } catch {
+    return null;
+  }
+};
+
+const syncThemeControls = () => {
+  if (!themeToggle) return;
+  const isDark = document.documentElement.dataset.theme === "dark";
+  themeToggle.setAttribute("aria-label", isDark ? "切换到浅色模式" : "切换到深色模式");
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeColorMeta?.setAttribute("content", isDark ? "#08111f" : "#f5f5f7");
+};
+
+const setTheme = (theme, persist = true) => {
+  document.documentElement.dataset.theme = theme;
+  if (persist) {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {}
+  }
+  syncThemeControls();
+};
+
+syncThemeControls();
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
+});
+
+colorSchemeQuery.addEventListener("change", (event) => {
+  if (!getStoredTheme()) {
+    setTheme(event.matches ? "dark" : "light", false);
+  }
+});
 
 const setMenuState = (isOpen) => {
   if (!menuButton || !navigation) return;
