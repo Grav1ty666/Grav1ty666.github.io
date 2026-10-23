@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>泰州市姜堰区实验小学（北街校区）字标</title>
+  <circle cx="256" cy="256" r="244" fill="#fbfaf7"/>
+  <circle cx="256" cy="256" r="229" fill="none" stroke="#173b62" stroke-width="14"/>
+  <circle cx="256" cy="256" r="202" fill="none" stroke="#d2a047" stroke-width="5"/>
+  <path d="M147 196c38-15 73-9 109 18v151c-36-27-71-33-109-18V196Z" fill="#f5f2e9" stroke="#173b62" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M365 196c-38-15-73-9-109 18v151c36-27 71-33 109-18V196Z" fill="#f5f2e9" stroke="#173b62" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M256 214v151" stroke="#173b62" stroke-width="10" stroke-linecap="round"/>
+  <path d="M173 232c21-5 41-1 61 11M339 232c-21-5-41-1-61 11M173 270c21-5 41-1 61 11M339 270c-21-5-41-1-61 11" fill="none" stroke="#7c98b3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 91l12 34 36 1-28 22 10 35-30-20-30 20 10-35-28-22 36-1 12-34Z" fill="#d2a047"/>
+  <text x="256" y="414" text-anchor="middle" fill="#173b62" font-family="'PingFang SC','Microsoft YaHei UI','Microsoft YaHei',sans-serif" font-size="43" font-weight="700" letter-spacing="8">北街</text>
+  <text x="256" y="449" text-anchor="middle" fill="#6d7f8f" font-family="'Inter','Arial',sans-serif" font-size="15" font-weight="600" letter-spacing="5">SHIYAN PRIMARY</text>
+</svg>
