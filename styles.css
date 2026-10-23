@@ -1330,21 +1330,26 @@ main,
 .toolkit-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 18px;
 }
 
 .tool-card {
   min-height: 330px;
   padding: 32px 30px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
   background: var(--tool-bg);
-  transition: background 200ms ease;
+  transition:
+    transform 260ms var(--ease),
+    border-color 260ms ease,
+    background 260ms ease;
 }
 
 .tool-card:hover {
+  border-color: var(--accent-border);
   background: var(--tool-hover);
+  transform: translateY(-6px);
 }
 
 .tool-number {
